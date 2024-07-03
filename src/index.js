@@ -1,11 +1,5 @@
-const kalimat = require("./file1");
-require("./style.css");
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./app";
 
-console.log(kalimat);
-console.log("varel ganteng");
-
-const newEl = document.createElement("h1");
-newEl.innerHTML = kalimat;
-newEl.className = "text";
-
-document.body.appendChild(newEl);
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
