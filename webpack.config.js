@@ -21,4 +21,12 @@ module.exports = {
       template: path.resolve(__dirname, "public", "index.html"),
     }),
   ],
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "dist"), // Serve content from 'dist' directory
+    },
+    compress: true, // Enable gzip compression for everything served
+    port: 9000, // Port to run the dev server on
+    hot: true, // Enable hot module replacement
+  },
 };
